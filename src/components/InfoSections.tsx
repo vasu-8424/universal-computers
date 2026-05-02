@@ -24,7 +24,7 @@ export const WhyChooseUs = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-blue mb-6">WHY CHOOSE UC</h2>
-            <h3 className="text-5xl md:text-7xl font-black tracking-normal leading-tight mb-12 uppercase">
+            <h3 className="text-4xl md:text-7xl font-black tracking-normal leading-snug mb-12 uppercase">
               RELIABILITY <br /> 
               <span className="text-brand-orange italic">THAT MATTERS.</span>
             </h3>
@@ -37,10 +37,10 @@ export const WhyChooseUs = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="flex items-center gap-4 p-5 bg-white/5 border border-white/10 rounded-2xl"
+                  className="flex items-center gap-4 p-5 bg-black/5 border border-black/10 rounded-2xl"
                 >
                   <CheckCircle2 className="w-5 h-5 text-brand-orange shrink-0" />
-                  <span className="text-[11px] font-black uppercase tracking-wider text-white/70">{pt}</span>
+                  <span className="text-[11px] font-black uppercase tracking-wider text-black/70">{pt}</span>
                 </motion.div>
               ))}
             </div>
@@ -81,9 +81,9 @@ export const Gallery = () => {
   const images = [
     "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&q=80&w=800",
     "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1611186871348-b1ec696e523b?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1525547718571-03ad397ef816?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1504707748692-419802cf939d?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1629131726692-1accd0c53ce0?auto=format&fit=crop&q=80&w=800",
     "https://images.unsplash.com/photo-1580522151917-c5ec52902d51?auto=format&fit=crop&q=80&w=800"
   ];
 
@@ -91,8 +91,8 @@ export const Gallery = () => {
     <section id="gallery" className="py-32">
       <div className="max-w-7xl mx-auto px-5">
         <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-orange mb-6 text-center">CURRENT STOCK</h2>
-        <h3 className="text-5xl md:text-7xl font-black tracking-normal leading-tight text-center mb-20 uppercase">
-          REAL DEVICES. <br/><span className="text-white/20 italic">REAL DEALS.</span>
+        <h3 className="text-4xl md:text-7xl font-black tracking-normal leading-snug text-center mb-20 uppercase">
+          REAL DEVICES. <br/><span className="text-black/20 italic">REAL DEALS.</span>
         </h3>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -118,7 +118,7 @@ export const Gallery = () => {
 
 export const Contact = () => {
   return (
-    <section id="contact" className="py-32 bg-mesh relative overflow-hidden border-t border-white/5">
+    <section id="contact" className="py-32 bg-mesh relative overflow-hidden border-t border-black/5">
       <div className="max-w-7xl mx-auto px-5 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16">
           <motion.div
@@ -127,7 +127,7 @@ export const Contact = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-blue mb-6">GET IN TOUCH</h2>
-            <h3 className="text-5xl md:text-7xl font-black tracking-normal leading-tight mb-10 uppercase">
+            <h3 className="text-4xl md:text-7xl font-black tracking-normal leading-snug mb-10 uppercase">
               VISIT OUR <br /> 
               <span className="text-brand-orange italic">EXPERIENCE STORE.</span>
             </h3>
@@ -138,11 +138,11 @@ export const Contact = () => {
                   <MapPin className="text-brand-blue w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-black text-xs uppercase tracking-widest text-white/40 mb-2">Location</h4>
+                  <h4 className="font-black text-xs uppercase tracking-widest text-black/40 mb-2">Location</h4>
                   <p className="text-lg font-bold leading-tight">
                     Proddatur, AP, India.
                   </p>
-                  <p className="text-sm text-white/40 mt-1">D.N0, 14/331, Church Complex Upstairs</p>
+                  <p className="text-sm text-black/40 mt-1">D.N0, 14/331, Church Complex Upstairs</p>
                 </div>
               </div>
               
@@ -151,7 +151,7 @@ export const Contact = () => {
                   <Phone className="text-brand-orange w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-black text-xs uppercase tracking-widest text-white/40 mb-2">Phone</h4>
+                  <h4 className="font-black text-xs uppercase tracking-widest text-black/40 mb-2">Phone</h4>
                   <p className="text-2xl font-mono font-black">+91 87121 73339</p>
                 </div>
               </div>
@@ -186,23 +186,23 @@ export const Contact = () => {
                 <input 
                   type="text" 
                   placeholder="Your Name" 
-                  className="bg-white/5 border border-white/10 rounded-2xl p-4 outline-none focus:border-brand-blue/50 w-full"
+                  className="bg-black/5 border border-black/10 rounded-2xl p-4 outline-none focus:border-brand-blue/50 w-full text-black placeholder:text-black/50"
                 />
                 <input 
                   type="text" 
                   placeholder="Phone Number" 
-                  className="bg-white/5 border border-white/10 rounded-2xl p-4 outline-none focus:border-brand-blue/50 w-full"
+                  className="bg-black/5 border border-black/10 rounded-2xl p-4 outline-none focus:border-brand-blue/50 w-full text-black placeholder:text-black/50"
                 />
               </div>
               <input 
                 type="email" 
                 placeholder="Email Address" 
-                className="bg-white/5 border border-white/10 rounded-2xl p-4 outline-none focus:border-brand-blue/50 w-full"
+                className="bg-black/5 border border-black/10 rounded-2xl p-4 outline-none focus:border-brand-blue/50 w-full text-black placeholder:text-black/50"
               />
               <textarea 
                 rows={4} 
                 placeholder="What laptop are you looking for?" 
-                className="bg-white/5 border border-white/10 rounded-2xl p-4 outline-none focus:border-brand-blue/50 w-full"
+                className="bg-black/5 border border-black/10 rounded-2xl p-4 outline-none focus:border-brand-blue/50 w-full text-black placeholder:text-black/50"
               ></textarea>
               <motion.button
                 whileHover={{ scale: 1.02 }}
@@ -222,17 +222,15 @@ export const Contact = () => {
 
 export const Footer = () => {
   return (
-    <footer className="py-24 border-t border-white/5 bg-bg-dark">
+    <footer className="py-24 border-t border-black/5 bg-bg-dark">
       <div className="max-w-7xl mx-auto px-5">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-16 mb-16">
           <div className="col-span-2">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-orange-500 rounded-xl flex items-center justify-center shadow-2xl">
-                <div className="text-white font-black text-xl">UC</div>
-              </div>
-              <span className="text-3xl font-black tracking-normal uppercase">Universal <br/>Computers.</span>
+            <div className="flex items-center gap-4 mb-8">
+              <img src="/logo.jpg" alt="Universal Computers Logo" className="w-16 h-16 object-contain" />
+              <span className="text-3xl font-black tracking-normal uppercase text-black">Universal <br/>Computers.</span>
             </div>
-            <p className="text-white/40 max-w-sm mb-10 leading-relaxed font-medium">
+            <p className="text-black/60 max-w-sm mb-10 leading-relaxed font-medium">
               Bringing premium technology within everyone's reach. Trusted by over 1k+ 
               satisfied customers for more than 9 years in Proddatur.
             </p>
@@ -241,22 +239,22 @@ export const Footer = () => {
           <div>
             <h4 className="font-black mb-8 uppercase text-[10px] tracking-[0.4em] text-brand-blue">Store Info</h4>
             <div className="space-y-4 font-black uppercase text-[10px] tracking-widest">
-              <p className="text-white/30">MON-SAT 9AM-8:30PM</p>
+              <p className="text-black/50">MON-SAT 9AM-8:30PM</p>
               <p className="text-brand-orange">SUN 10AM-6:00PM</p>
-              <p className="text-white">PRODDATUR, AP</p>
+              <p className="text-black">PRODDATUR, AP</p>
             </div>
           </div>
 
           <div>
             <h4 className="font-black mb-8 uppercase text-[10px] tracking-[0.4em] text-brand-orange">Socials</h4>
             <div className="flex gap-4">
-              <a href="#" className="text-xs font-black uppercase tracking-widest text-white/40 hover:text-white transition-all">INSTAGRAM</a>
-              <a href="#" className="text-xs font-black uppercase tracking-widest text-white/40 hover:text-white transition-all">YOUTUBE</a>
+              <a href="#" className="text-xs font-black uppercase tracking-widest text-black/40 hover:text-black transition-all">INSTAGRAM</a>
+              <a href="#" className="text-xs font-black uppercase tracking-widest text-black/40 hover:text-black transition-all">YOUTUBE</a>
             </div>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-black text-white/10 uppercase tracking-[0.5em]">
+        <div className="pt-8 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-black text-black/30 uppercase tracking-[0.5em]">
           <div>© 2024 UNIVERSAL COMPUTERS</div>
           <div>ESTD 2015</div>
         </div>

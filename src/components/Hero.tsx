@@ -7,7 +7,7 @@ export const Hero = () => {
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Simulation */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-bg-dark/80 z-10" />
+        <div className="absolute inset-0 bg-bg-dark/90 z-10" />
         <video 
           autoPlay 
           muted 
@@ -46,15 +46,15 @@ export const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="inline-block px-4 py-1.5 bg-white/5 border border-white/10 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] text-brand-orange mb-8">
+            <span className="inline-block px-4 py-1.5 bg-black/5 border border-black/10 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] text-brand-orange mb-8">
               TRUSTED STORE SINCE 2015
             </span>
-            <h1 className="text-6xl md:text-[90px] font-black tracking-normal leading-tight mb-10 uppercase">
+            <h1 className="text-4xl sm:text-6xl md:text-[90px] font-black tracking-normal leading-snug md:leading-tight mb-10 uppercase">
               UPGRADE <br />
               <span className="text-brand-blue italic pr-4">YOUR</span> 
               <span className="text-brand-orange">TECH.</span>
             </h1>
-            <p className="text-lg md:text-xl text-white/50 mb-12 leading-relaxed max-w-xl font-medium">
+            <p className="text-lg md:text-xl text-black/60 mb-12 leading-relaxed max-w-xl font-medium">
               Premium Refurbished Laptops from Dell, HP & Lenovo. 
               High performance, verified quality, and student-friendly prices.
             </p>
@@ -63,17 +63,17 @@ export const Hero = () => {
               <div className="flex gap-10">
                 <div className="flex flex-col">
                   <span className="text-4xl font-black text-brand-orange">1000+</span>
-                  <span className="text-[10px] text-white/30 font-black uppercase tracking-widest">Happy Clients</span>
+                  <span className="text-[10px] text-black/50 font-black uppercase tracking-widest">Happy Clients</span>
                 </div>
-                <div className="w-px h-12 bg-white/10 hidden sm:block"></div>
+                <div className="w-px h-12 bg-black/10 hidden sm:block"></div>
                 <div className="flex flex-col">
                   <span className="text-4xl font-black text-brand-blue">9+ YRS</span>
-                  <span className="text-[10px] text-white/30 font-black uppercase tracking-widest">Market Leader</span>
+                  <span className="text-[10px] text-black/50 font-black uppercase tracking-widest">Market Leader</span>
                 </div>
-                <div className="w-px h-12 bg-white/10 hidden sm:block"></div>
+                <div className="w-px h-12 bg-black/10 hidden sm:block"></div>
                 <div className="flex flex-col">
-                  <span className="text-4xl font-black text-white">500+</span>
-                  <span className="text-[10px] text-white/30 font-black uppercase tracking-widest">Daily Inventory</span>
+                  <span className="text-4xl font-black text-black">500+</span>
+                  <span className="text-[10px] text-black/50 font-black uppercase tracking-widest">Daily Inventory</span>
                 </div>
               </div>
             </div>
@@ -83,7 +83,7 @@ export const Hero = () => {
                 href="#products"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-black px-10 py-5 rounded-full text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2 transition-all hover:bg-brand-orange hover:text-white"
+                className="bg-black text-white px-10 py-5 rounded-full text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2 transition-all hover:bg-brand-orange hover:text-white"
               >
                 View Inventory
                 <ArrowRight className="w-4 h-4" />
@@ -94,7 +94,7 @@ export const Hero = () => {
                 target="_blank"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-10 py-5 glass rounded-full text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-white/10"
+                className="px-10 py-5 glass rounded-full text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-black/5 text-black"
               >
                 <MessageSquare className="w-4 h-4 text-brand-orange" />
                 Expert Inquiry

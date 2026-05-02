@@ -34,14 +34,12 @@ export const Navbar = () => {
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="flex items-center gap-2 group cursor-pointer"
+          className="flex items-center gap-3 group cursor-pointer"
         >
-          <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-orange-500 rounded-lg flex items-center justify-center group-hover:rotate-12 transition-transform shadow-lg shadow-brand-blue/20">
-            <span className="text-white font-bold text-sm">UC</span>
-          </div>
-          <div>
-            <span className="text-xl font-bold tracking-normal text-white block leading-none">UNIVERSAL COMPUTERS</span>
-            <span className="text-[9px] uppercase tracking-[0.3em] text-white/40 font-bold">Refurbished Excellence</span>
+          <img src="/logo.jpg" alt="Universal Computers Logo" className="w-12 h-12 md:w-16 md:h-16 object-contain drop-shadow-md group-hover:scale-105 transition-transform" />
+          <div className="hidden sm:block">
+            <span className="text-xl font-bold tracking-normal text-black block leading-none">UNIVERSAL COMPUTERS</span>
+            <span className="text-[9px] uppercase tracking-[0.3em] text-black/40 font-bold">Refurbished Excellence</span>
           </div>
         </motion.div>
 
@@ -54,7 +52,7 @@ export const Navbar = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: i * 0.1 }}
-              className="text-[11px] font-black uppercase tracking-[0.2em] text-white/50 hover:text-white transition-all relative group"
+              className="text-[11px] font-black uppercase tracking-[0.2em] text-black/50 hover:text-black transition-all relative group"
             >
               {link.name}
             </motion.a>
@@ -69,13 +67,13 @@ export const Navbar = () => {
           <motion.a 
             href="tel:8712173339"
             whileHover={{ backgroundColor: '#EA580C', color: '#fff' }}
-            className="hidden lg:block px-6 py-2.5 bg-white text-black text-[10px] font-black tracking-widest rounded-full transition-all"
+            className="hidden lg:block px-6 py-2.5 bg-black text-white text-[10px] font-black tracking-widest rounded-full transition-all"
           >
             ENQUIRE NOW
           </motion.a>
           
           <button 
-            className="md:hidden text-white"
+            className="md:hidden text-black"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X /> : <Menu />}
@@ -98,7 +96,7 @@ export const Navbar = () => {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-lg font-medium text-gray-200 hover:text-brand-blue border-b border-white/5 pb-2"
+                  className="text-lg font-medium text-gray-800 hover:text-brand-blue border-b border-black/5 pb-2"
                 >
                   {link.name}
                 </a>

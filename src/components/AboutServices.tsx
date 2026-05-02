@@ -16,7 +16,7 @@ const CountUp = ({ to, label }: { to: string, label: string }) => {
       >
         {to}
       </motion.div>
-      <div className="text-[10px] uppercase tracking-[0.3em] text-white/30 font-black">{label}</div>
+      <div className="text-[10px] uppercase tracking-[0.3em] text-black/30 font-black">{label}</div>
     </div>
   );
 };
@@ -36,11 +36,11 @@ export const About = () => {
             <img 
               src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&q=80&w=1200" 
               alt="Laptop Store" 
-              className="rounded-3xl shadow-2xl relative z-10 border border-white/10"
+              className="rounded-3xl shadow-2xl relative z-10 border border-black/10"
             />
             <div className="absolute -bottom-6 -right-6 glass p-6 rounded-2xl z-20 shadow-xl max-w-[200px]">
               <span className="text-3xl font-bold text-brand-orange">9+ Years</span>
-              <p className="text-sm text-gray-400 mt-1 uppercase font-bold tracking-tight">of Trusted Excellence</p>
+              <p className="text-sm text-gray-600 mt-1 uppercase font-bold tracking-tight">of Trusted Excellence</p>
             </div>
           </motion.div>
 
@@ -51,17 +51,17 @@ export const About = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-orange mb-6">PRODDATUR'S TECH HUB</h2>
-              <h3 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] mb-10 uppercase">
+              <h3 className="text-4xl md:text-7xl font-black tracking-tighter leading-none mb-10 uppercase">
                 TRUSTED <br /> 
-                <span className="text-white/20 italic">SINCE 2015.</span>
+                <span className="text-black/20 italic">SINCE 2015.</span>
               </h3>
-              <p className="text-white/50 text-xl mb-12 leading-relaxed font-medium">
+              <p className="text-black/60 text-xl mb-12 leading-relaxed font-medium">
                 Universal Computers (UC) has been a leading technological hub for over 9 years. 
                 Our focus has always been on bridging the gap between premium tech and 
                 affordable pricing.
               </p>
 
-              <div className="grid grid-cols-3 gap-8 p-12 bg-white/5 border border-white/10 rounded-[40px]">
+              <div className="grid grid-cols-3 gap-8 p-12 bg-black/5 border border-black/10 rounded-[40px]">
                 <CountUp to="1k+" label="Customers" />
                 <CountUp to="500+" label="Models" />
                 <CountUp to="#1" label="Rated" />
@@ -91,11 +91,11 @@ const ServiceCard = ({ icon: Icon, title, description, delay }: ServiceCardProps
     whileHover={{ y: -10 }}
     className="glass p-8 rounded-3xl group transition-all"
   >
-    <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-blue group-hover:scale-110 transition-all duration-500">
+    <div className="w-14 h-14 bg-black/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-blue group-hover:scale-110 transition-all duration-500">
       <Icon className="w-7 h-7 group-hover:text-white text-brand-blue transition-colors" />
     </div>
     <h4 className="text-xl font-bold mb-4">{title}</h4>
-    <p className="text-gray-400 text-sm leading-relaxed">
+    <p className="text-gray-600 text-sm leading-relaxed">
       {description}
     </p>
   </motion.div>
@@ -131,7 +131,7 @@ export const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-32 bg-mesh border-y border-white/5">
+    <section id="services" className="py-32 bg-mesh border-y border-black/5">
       <div className="max-w-7xl mx-auto px-5">
         <div className="max-w-3xl mb-20">
           <motion.div
@@ -140,7 +140,7 @@ export const Services = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-blue mb-6">OUR SERVICES</h2>
-            <h3 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] uppercase">
+            <h3 className="text-4xl md:text-7xl font-black tracking-tighter leading-none uppercase">
               BEYOND SELLING. <br /> 
               <span className="text-brand-orange italic">EXCELLENCE ONLY.</span>
             </h3>

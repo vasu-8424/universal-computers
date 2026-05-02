@@ -5,9 +5,15 @@ export interface Laptop {
   specs: string;
   category: 'Business' | 'High Performance' | 'Graphics' | 'Student' | 'Developer' | 'Accessories';
   tag?: 'Best Seller' | 'New' | 'Offer';
-  price?: string; // Optional if they don't want to show price directly but "Enquire" instead
+  price?: string;
   image: string;
 }
+
+const dellImage = "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&q=80&w=800";
+const hpImage = "https://images.unsplash.com/photo-1544006659-f0b21f04cb1d?auto=format&fit=crop&q=80&w=800";
+const lenovoImage = "https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?auto=format&fit=crop&q=80&w=800";
+const appleImage = "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=800";
+const genericWindowImage = "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&q=80&w=800";
 
 export const products: Laptop[] = [
   {
@@ -17,7 +23,7 @@ export const products: Laptop[] = [
     specs: 'i3 6th Gen | 8GB | 256GB SSD | 15.6"',
     category: 'Student',
     tag: 'Offer',
-    image: 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&q=80&w=800'
+    image: dellImage
   },
   {
     id: '2',
@@ -26,7 +32,7 @@ export const products: Laptop[] = [
     specs: 'i3 8th Gen | 8GB | 256GB SSD | 14"',
     category: 'Business',
     tag: 'Best Seller',
-    image: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&q=80&w=800'
+    image: dellImage
   },
   {
     id: '3',
@@ -34,7 +40,7 @@ export const products: Laptop[] = [
     brand: 'Dell',
     specs: 'i3 7th Gen | 8GB | 256GB SSD | 14"',
     category: 'Business',
-    image: 'https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&q=80&w=800'
+    image: dellImage
   },
   {
     id: '4',
@@ -42,7 +48,7 @@ export const products: Laptop[] = [
     brand: 'Dell',
     specs: 'i7 7th Gen | 8GB | 256GB SSD | 15.6"',
     category: 'High Performance',
-    image: 'https://images.unsplash.com/photo-1511385348-a52b4a160dc2?auto=format&fit=crop&q=80&w=800'
+    image: genericWindowImage
   },
   {
     id: '5',
@@ -50,7 +56,7 @@ export const products: Laptop[] = [
     brand: 'Dell',
     specs: 'i7 7th Gen | 8GB | 256GB SSD | 14"',
     category: 'High Performance',
-    image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&q=80&w=800'
+    image: genericWindowImage
   },
   {
     id: '6',
@@ -58,7 +64,7 @@ export const products: Laptop[] = [
     brand: 'Dell',
     specs: 'i3 8th Gen | 8GB | 256GB SSD',
     category: 'Student',
-    image: 'https://images.unsplash.com/photo-1525547718571-03ad397ef816?auto=format&fit=crop&q=80&w=800'
+    image: dellImage
   },
   {
     id: '7',
@@ -66,7 +72,7 @@ export const products: Laptop[] = [
     brand: 'Dell',
     specs: 'i5 6th Gen | 8GB | 256GB SSD',
     category: 'Business',
-    image: 'https://images.unsplash.com/photo-1504707748692-419802cf939d?auto=format&fit=crop&q=80&w=800'
+    image: dellImage
   },
   {
     id: '8',
@@ -75,7 +81,7 @@ export const products: Laptop[] = [
     specs: 'i5 8th Gen | 8GB | 256GB SSD',
     category: 'Business',
     tag: 'Best Seller',
-    image: 'https://images.unsplash.com/photo-1629131726692-1accd0c53ce0?auto=format&fit=crop&q=80&w=800'
+    image: dellImage
   },
   {
     id: '9',
@@ -84,7 +90,7 @@ export const products: Laptop[] = [
     specs: 'i7 9th Gen | 8GB | 256GB SSD',
     category: 'Developer',
     tag: 'New',
-    image: 'https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?auto=format&fit=crop&q=80&w=800'
+    image: genericWindowImage
   },
   {
     id: '10',
@@ -92,7 +98,7 @@ export const products: Laptop[] = [
     brand: 'Dell',
     specs: 'i5 10th Gen | 16GB | 256GB SSD',
     category: 'Business',
-    image: 'https://images.unsplash.com/photo-1580522151917-c5ec52902d51?auto=format&fit=crop&q=80&w=800'
+    image: dellImage
   },
   {
     id: '11',
@@ -100,16 +106,16 @@ export const products: Laptop[] = [
     brand: 'Dell',
     specs: 'i7 10th Gen | 32GB | 256GB SSD',
     category: 'Developer',
-    image: 'https://images.unsplash.com/photo-1611186871348-b1ec696e523b?auto=format&fit=crop&q=80&w=800'
+    image: dellImage
   },
   {
     id: '12',
     name: 'Dell Precision 5550',
     brand: 'Dell',
-    specs: 'i7 10th Gen | 16GB | 512GB SSD | 4GB NVIDIA | UHD Touch',
+    specs: 'i7 10th Gen | 16GB | 512GB SSD | 4GB NVIDIA',
     category: 'Graphics',
     tag: 'New',
-    image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&q=80&w=800'
+    image: genericWindowImage
   },
   {
     id: '13',
@@ -117,7 +123,7 @@ export const products: Laptop[] = [
     brand: 'Dell',
     specs: 'i7 9th Gen | 8GB | 256GB SSD | RTX 3000',
     category: 'Graphics',
-    image: 'https://images.unsplash.com/photo-1525547718571-03ad397ef816?auto=format&fit=crop&q=80&w=800'
+    image: genericWindowImage
   },
   {
     id: '14',
@@ -125,7 +131,7 @@ export const products: Laptop[] = [
     brand: 'Dell',
     specs: 'i7 8850H | 8GB | 256GB SSD | P2000 GPU',
     category: 'Developer',
-    image: 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&q=80&w=800'
+    image: dellImage
   },
   {
     id: '15',
@@ -133,7 +139,7 @@ export const products: Laptop[] = [
     brand: 'HP',
     specs: 'Ryzen 5 | 8GB | 256GB SSD | 2GB GPU',
     category: 'Business',
-    image: 'https://images.unsplash.com/photo-1544006659-f0b21f04cb1d?auto=format&fit=crop&q=80&w=800'
+    image: hpImage
   },
   {
     id: '16',
@@ -141,7 +147,7 @@ export const products: Laptop[] = [
     brand: 'HP',
     specs: 'i5 8th Gen | 8GB | 256GB SSD',
     category: 'Business',
-    image: 'https://images.unsplash.com/photo-1589561253898-768105ca91a8?auto=format&fit=crop&q=80&w=800'
+    image: hpImage
   },
   {
     id: '17',
@@ -149,7 +155,7 @@ export const products: Laptop[] = [
     brand: 'Dell',
     specs: 'i5 11th Gen | 8GB | 256GB SSD',
     category: 'Business',
-    image: 'https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?auto=format&fit=crop&q=80&w=800'
+    image: dellImage
   },
   {
     id: '18',
@@ -158,9 +164,8 @@ export const products: Laptop[] = [
     specs: 'i5 8th Gen | 8GB | 256GB SSD | Touch',
     category: 'Business',
     tag: 'Best Seller',
-    image: 'https://images.unsplash.com/photo-1580522151917-c5ec52902d51?auto=format&fit=crop&q=80&w=800'
+    image: lenovoImage
   },
-  // Adding more variations to reach 50
   {
     id: '19',
     name: 'Lenovo ThinkPad X1 Carbon',
@@ -168,7 +173,7 @@ export const products: Laptop[] = [
     specs: 'i7 8th Gen | 16GB | 512GB SSD',
     category: 'High Performance',
     tag: 'Offer',
-    image: 'https://images.unsplash.com/photo-1525547718571-03ad397ef816?auto=format&fit=crop&q=80&w=800'
+    image: lenovoImage
   },
   {
     id: '20',
@@ -177,53 +182,34 @@ export const products: Laptop[] = [
     specs: 'M1 Chip | 8GB | 256GB SSD',
     category: 'Developer',
     tag: 'Best Seller',
-    image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=800'
+    image: appleImage
   }
 ];
 
-// Override some with verified high-quality laptop images to avoid broken links
-const verifiedTechImages = [
-  "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
-  "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
-  "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed",
-  "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-  "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
-  "https://images.unsplash.com/photo-1525547718571-03ad397ef816",
-  "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
-  "https://images.unsplash.com/photo-1611186871348-b1ec696e523b",
-  "https://images.unsplash.com/photo-1580522151917-c5ec52902d51",
-  "https://images.unsplash.com/photo-1544006659-f0b21f04cb1d",
-  "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6",
-  "https://images.unsplash.com/photo-1558981403-c5f91cbba527",
-  "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
-  "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
-  "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
-  "https://images.unsplash.com/photo-1504707748692-419802cf939d",
-  "https://images.unsplash.com/photo-1484788984921-03950022c9ef",
-  "https://images.unsplash.com/photo-1454165833767-1314d7977fb3",
-  "https://images.unsplash.com/photo-1496171367470-9ed9a91ea931",
-  "https://images.unsplash.com/photo-1537498425277-c23e41250058"
+const genericLaptops = [
+  dellImage,
+  hpImage,
+  lenovoImage,
+  genericWindowImage
 ];
 
-// Dynamically generate extra to reach 50 if needed for demo, 
-// but I will add real-ish looking ones.
 for (let i = 21; i <= 50; i++) {
-  const brands: ('Dell' | 'HP' | 'Lenovo' | 'Apple')[] = ['Dell', 'HP', 'Lenovo'];
+  const brands: ('Dell' | 'HP' | 'Lenovo')[] = ['Dell', 'HP', 'Lenovo'];
   const cats: Laptop['category'][] = ['Business', 'Student', 'Developer', 'High Performance'];
   const brand = brands[Math.floor(Math.random() * brands.length)];
   const cat = cats[Math.floor(Math.random() * cats.length)];
   
+  let selectedImage = genericWindowImage;
+  if (brand === 'Dell') selectedImage = dellImage;
+  if (brand === 'HP') selectedImage = hpImage;
+  if (brand === 'Lenovo') selectedImage = lenovoImage;
+
   products.push({
     id: i.toString(),
-    name: `${brand} Series ${i * 100}`,
+    name: `${brand} Series ${i * 10}`,
     brand,
     specs: `i5 ${Math.floor(Math.random() * 4) + 8}th Gen | 8GB | 512GB SSD`,
     category: cat,
-    image: `https://loremflickr.com/800/600/laptop?lock=${i}`
+    image: selectedImage
   });
 }
-
-// Ensure first 20 products also use the verified list and have no repeats
-products.slice(0, 20).forEach((p, idx) => {
-  p.image = verifiedTechImages[idx % verifiedTechImages.length] + `?auto=format&fit=crop&q=80&w=800`;
-});

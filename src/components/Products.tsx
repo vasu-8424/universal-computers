@@ -16,7 +16,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.9 }}
       whileHover={{ y: -10 }}
-      className="glass rounded-3xl overflow-hidden group border-white/5 hover:border-brand-blue/30 transition-all duration-500"
+      className="glass rounded-3xl overflow-hidden group border-black/5 hover:border-brand-blue/30 transition-all duration-500"
     >
       <div className="relative h-64 overflow-hidden">
         <img 
@@ -42,10 +42,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
       <div className="p-8">
         <div className="flex justify-between items-start mb-4">
           <span className="text-[10px] font-black uppercase tracking-[0.2em] text-brand-blue">{product.brand}</span>
-          <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white/30">{product.category}</span>
+          <span className="text-[10px] font-black uppercase tracking-[0.2em] text-black/30">{product.category}</span>
         </div>
-        <h4 className="text-2xl font-black mb-4 uppercase tracking-normal leading-none group-hover:text-brand-orange transition-colors">{product.name}</h4>
-        <p className="text-white/40 text-xs mb-8 line-clamp-1 font-bold">
+        <h4 className="text-2xl font-black mb-4 uppercase tracking-normal leading-snug group-hover:text-brand-orange transition-colors">{product.name}</h4>
+        <p className="text-black/50 text-xs mb-8 line-clamp-1 font-bold">
           {product.specs}
         </p>
         
@@ -54,7 +54,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           target="_blank"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="w-full py-4 border border-white/20 rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all flex items-center justify-center gap-2 group/btn"
+          className="w-full py-4 border border-black/20 rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all flex items-center justify-center gap-2 group/btn"
         >
           WHATSAPP INQUIRY
         </motion.a>
@@ -91,7 +91,7 @@ export const ProductsSection = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-orange mb-6">LIVE INVENTORY</h2>
-            <h3 className="text-5xl md:text-7xl font-black tracking-normal leading-tight uppercase">
+            <h3 className="text-4xl md:text-7xl font-black tracking-normal leading-snug uppercase">
               PREMIUM <br /> 
               <span className="text-brand-blue italic">COLLECTIONS.</span>
             </h3>
@@ -106,7 +106,7 @@ export const ProductsSection = () => {
                 placeholder="Search models..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="bg-white/5 border border-white/10 rounded-2xl py-3 pl-12 pr-6 outline-none focus:border-brand-blue/50 w-full md:w-64 transition-all"
+                className="bg-black/5 border border-black/10 rounded-2xl py-3 pl-12 pr-6 outline-none focus:border-brand-blue/50 w-full md:w-64 transition-all"
               />
             </div>
             
@@ -119,7 +119,7 @@ export const ProductsSection = () => {
                   className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
                     filter === cat 
                       ? 'bg-brand-blue text-white shadow-lg shadow-brand-blue/20' 
-                      : 'bg-white/5 text-gray-400 hover:bg-white/10'
+                      : 'bg-black/5 text-gray-600 hover:bg-black/10'
                   }`}
                 >
                   {cat}

@@ -20,7 +20,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="bg-bg-dark text-white selection:bg-brand-blue selection:text-white overflow-x-hidden">
+    <div className="bg-bg-dark text-text-primary selection:bg-brand-blue selection:text-white overflow-x-hidden">
       <Navbar />
       <WhatsAppButton />
       
