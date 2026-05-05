@@ -18,7 +18,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
       whileHover={{ y: -10 }}
       className="glass rounded-3xl overflow-hidden group border-black/5 hover:border-brand-blue/30 transition-all duration-500"
     >
-      <div className="relative h-64 overflow-hidden">
+      <div className="relative h-64 overflow-hidden bg-white/5">
         <img 
           src={product.image} 
           alt={product.name}

@@ -78,13 +78,23 @@ export const WhyChooseUs = () => {
 };
 
 export const Gallery = () => {
-  const images = [
-    "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1504707748692-419802cf939d?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1629131726692-1accd0c53ce0?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1580522151917-c5ec52902d51?auto=format&fit=crop&q=80&w=800"
+  const galleryItems = [
+    { image: "/Dell Latitude  3570.png", name: "Dell Latitude 3570" },
+    { image: "/Dell Latitude  5570.png", name: "Dell Latitude 5570" },
+    { image: "/Dell Latitude  7540.png", name: "Dell Latitude 7540" },
+    { image: "/Dell Latitude 5420.png", name: "Dell Latitude 5420" },
+    { image: "/Dell latitude  5490.png", name: "Dell Latitude 5490" },
+    { image: "/Dell latitude  5580.png", name: "Dell Latitude 5580" },
+    { image: "/Dell latitude 3400.png", name: "Dell Latitude 3400" },
+    { image: "/Dell latitude 3480.png", name: "Dell Latitude 3480" },
+    { image: "/Dell latitude 5400.png", name: "Dell Latitude 5400" },
+    { image: "/Dell precision 5530.png", name: "Dell Precision 5530" },
+    { image: "/Hp Elitebook  745 G6.png", name: "HP EliteBook 745 G6" },
+    { image: "/Hp Elitebook 840 G3.png", name: "HP EliteBook 840 G3" },
+    { image: "/Hp Elitebook 840 G5.png", name: "HP EliteBook 840 G5" },
+    { image: "/Hp probook 640 G5.png", name: "HP ProBook 640 G5" },
+    { image: "/T490.png", name: "Lenovo ThinkPad T490" },
+    { image: "/dell latitude 5550.png", name: "Dell Latitude 5550" }
   ];
 
   return (
@@ -95,19 +105,21 @@ export const Gallery = () => {
           REAL DEVICES. <br/><span className="text-black/20 italic">REAL DEALS.</span>
         </h3>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-          {images.map((img, i) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {galleryItems.map((item, i) => (
             <motion.div
               key={i}
               whileHover={{ scale: 0.98 }}
-              className="relative aspect-video rounded-2xl overflow-hidden glass group cursor-zoom-in"
+              className="relative aspect-video rounded-2xl overflow-hidden glass group cursor-zoom-in bg-white/50 flex items-center justify-center"
             >
               <img 
-                src={img} 
-                alt={`Stock ${i}`} 
+                src={item.image} 
+                alt={item.name} 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-brand-blue/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute bottom-0 inset-x-0 bg-black/70 backdrop-blur-md p-3 border-t border-white/10">
+                <span className="text-white font-bold uppercase tracking-wider text-[10px] md:text-xs text-center block">{item.name}</span>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -117,6 +129,19 @@ export const Gallery = () => {
 };
 
 export const Contact = () => {
+  const handleWhatsAppSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get('name') as string;
+    const phone = formData.get('phone') as string;
+    const email = formData.get('email') as string;
+    const message = formData.get('message') as string;
+
+    const text = `*New Inquiry*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email || 'Not provided'}\n*Requirement:* ${message}`;
+    const encodedText = encodeURIComponent(text);
+    window.open(`https://wa.me/918712173339?text=${encodedText}`, '_blank');
+  };
+
   return (
     <section id="contact" className="py-32 bg-mesh relative overflow-hidden border-t border-black/5">
       <div className="max-w-7xl mx-auto px-5 relative z-10">
@@ -158,13 +183,13 @@ export const Contact = () => {
             </div>
 
             <div className="flex gap-4">
-              <a href="https://www.instagram.com/_universal_computers_" className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-brand-blue transition-colors group">
+              <a href="https://www.instagram.com/_universal_computers_" target="_blank" rel="noreferrer" className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-brand-blue transition-colors group">
                 <Instagram className="w-5 h-5 group-hover:text-white" />
               </a>
-              <a href="https://www.youtube.com/@UniversalComputerspdtr" className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-brand-blue transition-colors group">
+              <a href="https://www.youtube.com/@UniversalComputerspdtr" target="_blank" rel="noreferrer" className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-brand-blue transition-colors group">
                 <Youtube className="w-5 h-5 group-hover:text-white" />
               </a>
-              <a href="https://www.facebook.com/share/14bJmiFVj6T/" className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-brand-blue transition-colors group">
+              <a href="https://www.facebook.com/share/14bJmiFVj6T/" target="_blank" rel="noreferrer" className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-brand-blue transition-colors group">
                 <Facebook className="w-5 h-5 group-hover:text-white" />
               </a>
             </div>
@@ -181,35 +206,43 @@ export const Contact = () => {
             </div>
             
             <h4 className="text-2xl font-black mb-8 tracking-tight">Drop us a message</h4>
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-4" onSubmit={handleWhatsAppSubmit}>
               <div className="grid md:grid-cols-2 gap-4">
                 <input 
                   type="text" 
+                  name="name"
+                  required
                   placeholder="Your Name" 
                   className="bg-black/5 border border-black/10 rounded-2xl p-4 outline-none focus:border-brand-blue/50 w-full text-black placeholder:text-black/50"
                 />
                 <input 
                   type="text" 
+                  name="phone"
+                  required
                   placeholder="Phone Number" 
                   className="bg-black/5 border border-black/10 rounded-2xl p-4 outline-none focus:border-brand-blue/50 w-full text-black placeholder:text-black/50"
                 />
               </div>
               <input 
                 type="email" 
-                placeholder="Email Address" 
+                name="email"
+                placeholder="Email Address (Optional)" 
                 className="bg-black/5 border border-black/10 rounded-2xl p-4 outline-none focus:border-brand-blue/50 w-full text-black placeholder:text-black/50"
               />
               <textarea 
                 rows={4} 
+                name="message"
+                required
                 placeholder="What laptop are you looking for?" 
                 className="bg-black/5 border border-black/10 rounded-2xl p-4 outline-none focus:border-brand-blue/50 w-full text-black placeholder:text-black/50"
               ></textarea>
               <motion.button
+                type="submit"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-brand-blue text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-2 shadow-xl shadow-brand-blue/20"
+                className="w-full bg-brand-blue text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-2 shadow-xl shadow-brand-blue/20 cursor-pointer"
               >
-                Send Message
+                Send via WhatsApp
                 <Send className="w-5 h-5" />
               </motion.button>
             </form>
